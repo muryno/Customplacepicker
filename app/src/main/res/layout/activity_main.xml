@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.muryno.customplacepicker.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progress="40"
+            android:progressBackgroundTint="@color/colorAccent"
+            android:progressTint="@color/scout_blue_dashboard"
+            android:max="100"
+            android:secondaryProgress="80"/>
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_right_20"
+                android:layout_marginRight="@dimen/margin_right_20"
+                android:layout_marginBottom="80dp"
+                android:id="@+id/show"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_right_20">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/mavenpro_bold"
+                        android:layout_marginRight="16dp"
+                        android:textColor="@color/black"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                        android:text="Place Location"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Country"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Naija"
+                        android:textColorHint="@color/grey_200"
+                        android:inputType="none"
+                        android:focusable="false"/>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Street"
+                        android:layout_marginTop="@dimen/margin_right_20"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="marina"
+                        android:textColorHint="@color/grey_200"
+                        android:inputType="none"
+                        android:focusable="false" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Street address"
+                        android:layout_marginTop="@dimen/margin_right_20"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/addres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Your full address will not be shared "
+                        android:textColorHint="@color/grey_200"
+                        style="@style/general_edit_text"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Apartment location"
+                        android:layout_marginTop="@dimen/margin_right_20"
+                        android:layout_marginBottom="@dimen/margin_bottom_spinner"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/apt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Room number"
+                        android:textColorHint="@color/grey_200"
+
+                        style="@style/general_edit_text"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="City"
+                        android:layout_marginTop="@dimen/margin_right_20"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/city_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="e.g. Surulere"
+                        android:singleLine="true"
+                        android:textColorHint="@color/grey_200"
+
+                        style="@style/general_edit_text"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="State"
+                        android:layout_marginTop="@dimen/margin_right_20"
+                        android:layout_marginBottom="@dimen/margin_bottom_spinner"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/state_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="lagos"
+                        android:singleLine="true"
+                        android:textColorHint="@color/grey_200"
+                        style="@style/general_edit_text"
+                        />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Zip code"
+                        android:layout_marginTop="@dimen/margin_right_20"
+                        android:layout_marginBottom="@dimen/margin_bottom_spinner"
+                        android:textSize="20sp"
+                        android:textColor="@color/black"/>
+
+                    <EditText
+                        android:id="@+id/post_cd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="02223"
+                        android:textColorHint="@color/grey_200"
+                        android:layout_marginBottom="100dp"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:id="@+id/nextfur"
+            style="@style/general_button_style"
+            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/spin_kit"
+            style="@style/SpinKitView.Wave"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:layout_marginTop="30dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/genera_list_but"
+            app:SpinKit_Color="@color/white"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.constraint.ConstraintLayout>
